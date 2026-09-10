@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store | Home</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home-page">
+    <div class="navbar">
+      <div class="nav-left">
+        <div class="logo-wrapper">
+          <img class="logo-img" src="logo.jpg">
+        </div>
+        <div class="brand-name">book store</div>
+      </div>
+      <button id="hamburger">☰</button>
+      <div class="nav-menu">
+        <span id="closeBtn">✕</span>
+        <div class="nav-link"><a href="home.html">Home</a></div>
+        <div class="nav-link"><a href="books.html">Books</a></div>
+        <div class="nav-link"><a href="events.html">Events</a></div>
+        <div class="nav-link"><a href="contacts.html">Contacts</a></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="hero-section">Welcome to BOOK STORE!!</div>
+      <div class="cards-section">
+        <div class="book-card">
+          <div class="book-img">
+            <img class="book-cover" src="silent-patient.jpg">
+          </div>
+          <div class="book-title">The Silent Patient</div>
+          <div class="book-des">
+            A gripping psychological thriller about a woman's shocking act of violence and the therapist obsessed with uncovering why.
+          </div>
+          <div class="book-price">₹399</div>
+        </div>
+        <div class="book-card">
+          <div class="book-img">
+            <img class="book-cover" src="atomic-habits.jpg">
+          </div>
+          <div class="book-title">Atomic Habits</div>
+          <div class="book-des">
+            A practical guide to building good habits and breaking bad ones, one small change at a time.
+          </div>
+          <div class="book-price">₹349</div>
+        </div>
+        <div class="book-card">
+          <div class="book-img">
+            <img class="book-cover" src="the-alchemist.jpg">
+          </div>
+          <div class="book-title">The Alchemist</div>
+          <div class="book-des">
+            A timeless tale of a shepherd's journey to find his personal legend, filled with wisdom and adventure.
+          </div>
+          <div class="book-price">₹299</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">thank you for visting our website!!</div>
+
+    <script>
+      const hamburger = document.querySelector('#hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        if (hamburger.textContent === '☰') {
+          hamburger.textContent = '✕';
+        } else {
+          hamburger.textContent = '☰';
+        }
+      });
+
+      const closeBtn = document.querySelector('#closeBtn');
+      closeBtn.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        hamburger.textContent = '☰';
+      });
+    </script>
+  </body>
+</html>

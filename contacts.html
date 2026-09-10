@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store | Contact</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="contacts-page">
+    <div class="navbar">
+      <div class="nav-left">
+        <div class="logo-wrapper">
+          <img class="logo-img" src="logo.jpg">
+        </div>
+        <div class="brand-name">book store</div>
+      </div>
+      <button id="hamburger">☰</button>
+      <div class="nav-menu">
+        <span id="closeBtn">✕</span>
+        <div class="nav-link"><a href="home.html">Home</a></div>
+        <div class="nav-link"><a href="books.html">Books</a></div>
+        <div class="nav-link"><a href="events.html">Events</a></div>
+        <div class="nav-link"><a href="contacts.html">Contacts</a></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="hero-section">Contact us</div>
+      <form class="contact-form">
+        <label>Name</label>
+        <input type="text" id="nameInput">
+
+        <label>Email</label>
+        <input type="email" id="emailInput">
+
+        <label>Message</label>
+        <textarea></textarea>
+
+        <button type="button" id="submitBtn">Submit</button>
+        <p id="formMessage"></p>
+      </form>
+
+      <div class="info-section">
+        <p>Hours: Mon-Sat, 10 AM - 8 PM</p>
+        <p>Location: 123 Main Street, Your City</p>
+      </div>
+    </div>
+
+    <div class="footer">thank you for visting our website!!</div>
+
+    <script>
+      const hamburger = document.querySelector('#hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        if (hamburger.textContent === '☰') {
+          hamburger.textContent = '✕';
+        } else {
+          hamburger.textContent = '☰';
+        }
+      });
+
+      const closeBtn = document.querySelector('#closeBtn');
+      closeBtn.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        hamburger.textContent = '☰';
+      });
+
+      const nameInput = document.querySelector('#nameInput');
+      const emailInput = document.querySelector('#emailInput');
+      const submitBtn = document.querySelector('#submitBtn');
+      const formMessage = document.querySelector('#formMessage');
+
+      submitBtn.addEventListener('click', function() {
+        if (nameInput.value === "") {
+          formMessage.textContent = "Please enter your name";
+        }
+        else if (!emailInput.value.includes("@")) {
+          formMessage.textContent = "Please enter valid email";
+        }
+        else {
+          formMessage.textContent = "Thanks! Your message has been sent.";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store | Events</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="events-page">
+    <div class="navbar">
+      <div class="nav-left">
+        <div class="logo-wrapper">
+          <img class="logo-img" src="logo.jpg">
+        </div>
+        <div class="brand-name">book store</div>
+      </div>
+      <button id="hamburger">☰</button>
+      <div class="nav-menu">
+        <span id="closeBtn">✕</span>
+        <div class="nav-link"><a href="home.html">Home</a></div>
+        <div class="nav-link"><a href="books.html">Books</a></div>
+        <div class="nav-link"><a href="events.html">Events</a></div>
+        <div class="nav-link"><a href="contacts.html">Contacts</a></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="hero-section">Upcoming Events</div>
+
+      <div class="event-row">
+        <div class="event-date">Sept 26, 2026, 11:00 AM</div>
+        <div class="event-info">
+          <div class="event-title">Kids' Storytime Saturday</div>
+          <div class="event-des">
+            A weekly reading session for children ages 4-8, featuring picture books and a short craft activity.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-date">Sept 19, 2026, 7:00 PM</div>
+        <div class="event-info">
+          <div class="event-title">Open Mic Poetry Night</div>
+          <div class="event-des">
+            Share your own poetry or just come listen. Coffee and snacks available all evening.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-date">Sept 12, 2026, 5:30 PM</div>
+        <div class="event-info">
+          <div class="event-title">Author Meet: Local Voices</div>
+          <div class="event-des">
+            An evening with three regional authors sharing their journeys and reading excerpts from their latest work.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-row">
+        <div class="event-date">Sept 5, 2026, 6:00 PM</div>
+        <div class="event-info">
+          <div class="event-title">Monthly Book Club</div>
+          <div class="event-des">
+            Join fellow readers for a discussion on this month's pick, "The Silent Patient." New members welcome.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">thank you for visting our website!!</div>
+
+    <script>
+      const hamburger = document.querySelector('#hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        if (hamburger.textContent === '☰') {
+          hamburger.textContent = '✕';
+        } else {
+          hamburger.textContent = '☰';
+        }
+      });
+
+      const closeBtn = document.querySelector('#closeBtn');
+      closeBtn.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        hamburger.textContent = '☰';
+      });
+    </script>
+  </body>
+</html>
