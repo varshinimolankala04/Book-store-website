@@ -39,7 +39,7 @@ book-store-website/
 
 1. Download or clone this repository.
 2. Open the project folder.
-3. Open `home.html` in any web browser to start browsing the site.
+3. Open `index.html` in any web browser to start browsing the site.
 
 📸 Preview
 
