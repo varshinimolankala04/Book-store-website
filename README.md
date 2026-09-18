@@ -22,7 +22,7 @@ A modern and responsive multi-page bookstore/café website built using HTML, CSS
 📁 Project Structure
 
 book-store-website/
-|── home.html
+|── index.html
 |── books.html
 |── events.html
 |── contacts.html
